@@ -47,7 +47,7 @@ public class WebExceptionHandler extends AbstractErrorWebExceptionHandler {
         String statusCode = String.valueOf(generalError.get("status"));
         Throwable error = getError(req);
 
-        // stich mejorado, disponible desde java 16/17
+        // swtich mejorado, disponible desde java 16/17
         switch (statusCode) {
             case "400", "422" -> {
                 customError.put("message", error.getMessage());
